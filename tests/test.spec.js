@@ -7,7 +7,9 @@ test.describe("Unauthenticated tests", () => {
     const tempContext = await browser.newContext(); // Temporary context
     const tempPage = await tempContext.newPage();
     await loginInvalid(tempPage, testData.invalidLogin); // Test invalid login
-    await expect(tempPage.locator("#notistack-snackbar")).toHaveText(testData.loginErrorMessage); // Verify error message    
+    await expect(tempPage.locator("#notistack-snackbar")).toHaveText(
+      testData.loginErrorMessage
+    ); // Verify error message
     await tempContext.close(); // Cleanup only the temporary context
   });
 });
@@ -25,11 +27,14 @@ test.describe("login", () => {
   });
 
   test.afterEach(async () => {
-    if (loggedIn) {
-      await logout(page); // Perform logout only if logged in
-      loggedIn = false; // Reset the flag
+    if (context) {
+      if (loggedIn) {
+        await logout(page); // Perform logout only if logged in
+        loggedIn = false;
+      }
+      await context.close(); // Clean up only if context is not null
+      context = null; // Reset context to avoid reuse
     }
-    await context.close(); // Always clean up the browser context
   });
 
   test("Create a new business", async () => {
