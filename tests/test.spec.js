@@ -33,6 +33,6 @@ test.describe("login", () => {
   });
 
   test("Create a new business", async () => {
-    console.log("Login test passed");
+    console.log("Login test passed successfully");
   });
 });
