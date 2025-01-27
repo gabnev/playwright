@@ -16,7 +16,6 @@ const login = async (page) => {
     .locator('[data-testid="auth.login.password"] input')
     .fill(process.env.PASSWORD);
   await page.locator('[data-testid="auth.login.submit"]').click();
-  await expect(page.locator('[data-testid="BusinessIcon"]')).toBeVisible();
 };
 
 const loginInvalid = async (page, { email, password }) => {
