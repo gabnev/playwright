@@ -1,0 +1,7 @@
+{
+  "invalidLogin": {
+    "email": "invalid.login@gmail.com",
+    "password": "notmypassword"
+  },
+  "loginErrorMessage": "Invalid credentials. Check info and try again."
+}
