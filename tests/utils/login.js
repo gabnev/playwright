@@ -16,6 +16,7 @@ const login = async (page) => {
     .locator('[data-testid="auth.login.password"] input')
     .fill(process.env.PASSWORD);
   await page.locator('[data-testid="auth.login.submit"]').click();
+  // Do not forget to add validations
 };
 
 const loginInvalid = async (page, { email, password }) => {
