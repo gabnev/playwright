@@ -35,7 +35,7 @@ jobs:
 
       - name: Upload Playwright Report
         if: always() # Always upload reports, even if tests fail
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report # Upload Playwright's HTML report
