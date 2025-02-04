@@ -31,7 +31,7 @@ jobs:
         env:
           SIGN_IN: ${{ secrets.SIGN_IN }}
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: npx playwright test
+        run: npx playwright test tests/test.spec.js
 
       - name: Upload Playwright Report
         if: always() # Always upload reports, even if tests fail

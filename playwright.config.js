@@ -1,26 +1,29 @@
-// @ts-check
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
 import dotenv from "dotenv";
 
 dotenv.config();
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : 1,
-  reporter: 'html',
+  reporter: [
+    ["html", { outputFolder: "custom-report", open: "on-failure" }],
+    ["json", { outputFile: "report.json" }],
+    ['allure-playwright'],
+  ],
   use: {
-    trace: 'on-first-retry',
-    headless: true
+    trace: "on-first-retry",
+    headless: true,
   },
 
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
     },
 
     // {
@@ -33,6 +36,4 @@ export default defineConfig({
     //   use: { ...devices['Desktop Safari'] },
     // },
   ],
-
 });
-
