@@ -13,11 +13,17 @@ export default defineConfig({
   reporter: [
     ["html", { outputFolder: "custom-report", open: "on-failure" }],
     ["json", { outputFile: "report.json" }],
-    ['allure-playwright'],
+    ["allure-playwright"],
   ],
+  timeout: 60000, // Global timeout for each test
+  expect: {
+    timeout: 10000, // Timeout for expect assertions
+  },
   use: {
     trace: "on-first-retry",
     headless: true,
+    actionTimeout: 10000, // Timeout for each action (e.g., click, fill)
+    navigationTimeout: 30000, // Timeout for navigation actions
   },
 
   projects: [
