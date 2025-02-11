@@ -17,10 +17,12 @@ class CartActions {
     async addSpecificItemToCart(itemNames) {
 
         const items = Array.isArray(itemNames) ? itemNames : [itemNames];
-
+        
         for (const itemName of items) {
             const itemContainer = this.page.locator(`.inventory_item:has-text("${itemName}")`).first();
+            await itemContainer.waitFor();
             const addItemToCartButton = itemContainer.locator('.btn_inventory');
+            await addItemToCartButton.waitFor();
             await addItemToCartButton.click();
         }
     }

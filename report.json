@@ -9,7 +9,7 @@
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
-    "maxFailures": 1,
+    "maxFailures": 0,
     "metadata": {
       "actualWorkers": 1
     },
@@ -51,7 +51,7 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 0
+        "timeout": 30000
       }
     ],
     "shard": null,
@@ -81,7 +81,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -90,12 +90,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 4756,
+                      "duration": 3531,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T17:06:18.933Z",
+                      "startTime": "2025-02-11T17:18:34.067Z",
                       "attachments": []
                     }
                   ],
@@ -121,7 +121,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 0,
+                  "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectId": "chromium",
@@ -130,12 +130,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 6014,
+                      "duration": 1497,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T17:06:23.891Z",
+                      "startTime": "2025-02-11T17:18:37.700Z",
                       "attachments": []
                     }
                   ],
@@ -154,8 +154,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-11T17:06:18.430Z",
-    "duration": 11706.976,
+    "startTime": "2025-02-11T17:18:33.652Z",
+    "duration": 5586.02,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,
