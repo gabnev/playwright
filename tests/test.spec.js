@@ -1,6 +1,7 @@
 
 const { test, expect } = require("@playwright/test");
 const LoginPage = require("./utils/loginPage");
+const CartActions = require("./utils/cartActions");
 const testData = require("./data/testData.json");
 
 test.describe("Unauthenticated tests", () => {
@@ -20,6 +21,7 @@ test.describe("login", () => {
   let context;
   let page;
   let loginPage;
+  let cartActions;
   let loggedIn = false; // Add a flag to track login state
 
   test.beforeEach(async ({ browser }) => {
@@ -43,7 +45,13 @@ test.describe("login", () => {
     }
   });
 
-  test("Create a new business", async () => {
-    console.log("Login test passed successfully");
+  // test("Add all items to cart", async () => {
+  //   cartActions = new CartActions(page); // Create a new instance of the cart actions
+  //   await cartActions.addAllItemsToCart(); // Add all items to the cart
+  // });
+
+  test("Add specific items to cart", async () => {
+    cartActions = new CartActions(page); // Create a new instance of the cart actions
+    await cartActions.addSpecificItemToCart("backpack"); // Add specific items to the cart
   });
 });

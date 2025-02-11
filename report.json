@@ -72,7 +72,7 @@
         {
           "title": "Unauthenticated tests",
           "file": "test.spec.js",
-          "line": 6,
+          "line": 7,
           "column": 6,
           "specs": [
             {
@@ -90,12 +90,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 3849,
+                      "duration": 4756,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T10:42:54.158Z",
+                      "startTime": "2025-02-11T17:06:18.933Z",
                       "attachments": []
                     }
                   ],
@@ -104,7 +104,7 @@
               ],
               "id": "31be70adcd52654ff551-016cbb581bfbb9029301",
               "file": "test.spec.js",
-              "line": 7,
+              "line": 8,
               "column": 3
             }
           ]
@@ -112,11 +112,11 @@
         {
           "title": "login",
           "file": "test.spec.js",
-          "line": 19,
+          "line": 20,
           "column": 6,
           "specs": [
             {
-              "title": "Create a new business",
+              "title": "Add specific items to cart",
               "ok": true,
               "tags": [],
               "tests": [
@@ -130,25 +130,21 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8649,
+                      "duration": 6014,
                       "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login test passed successfully\n"
-                        }
-                      ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-02-11T10:42:58.134Z",
+                      "startTime": "2025-02-11T17:06:23.891Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "31be70adcd52654ff551-49bd521831a1364b50db",
+              "id": "31be70adcd52654ff551-6525a733fa57153a54ae",
               "file": "test.spec.js",
-              "line": 46,
+              "line": 53,
               "column": 3
             }
           ]
@@ -158,8 +154,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-02-11T10:42:53.779Z",
-    "duration": 13199.181999999999,
+    "startTime": "2025-02-11T17:06:18.430Z",
+    "duration": 11706.976,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,
