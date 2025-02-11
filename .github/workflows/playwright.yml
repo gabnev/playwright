@@ -38,7 +38,7 @@ jobs:
         env:
           SIGN_IN: ${{ secrets.SIGN_IN }}
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: npx playwright test --headless --trace on --timeout=60000 --workers=1
+        run: npx playwright test --trace on --timeout=60000 --workers=1
 
       - name: Upload Playwright Trace
         if: always()
